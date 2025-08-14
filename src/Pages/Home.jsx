@@ -4,7 +4,6 @@ import {
   Linkedin,
   Mail,
   ExternalLink,
-
   Sparkles,
 } from "lucide-react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
@@ -100,12 +99,12 @@ const TECH_STACK = [
   "OOPs",
   "API Development",
   "Middleware",
-  "Networking Fundamentals"
+  "Networking Fundamentals",
 ];
 
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/Anshdeep6963015" },
-  { icon: Linkedin, link: "https://www.linkedin.com/in/ansh-deep-29ab01379/sh-deep-29ab01379Anshdeep-verma-46b95b238" },
+  { icon: Linkedin, link: "https://www.linkedin.com/in/ansh-deep-29ab01379" },
 ];
 
 const Home = () => {
@@ -123,7 +122,6 @@ const Home = () => {
         offset: 10,
       });
     };
-
     initAOS();
     window.addEventListener("resize", initAOS);
     return () => window.removeEventListener("resize", initAOS);
@@ -217,9 +215,10 @@ const Home = () => {
                   data-aos="fade-up"
                   data-aos-delay="1000"
                 >
-                  My name is <span className="font-medium text-white">Anshdeep</span><br />
-  A Computer Science & Engineering student at Chitkara University with a passion for creating impactful, user-friendly applications. Skilled in full-stack development, I enjoy working with modern technologies, solving real-world challenges, and continuously learning to deliver clean, scalable solutions.
-</p>
+                  My name is <span className="font-medium text-white">Anshdeep</span>
+                  <br />
+                  A Computer Science & Engineering student at Chitkara University with a passion for creating impactful, user-friendly applications. Skilled in full-stack development, I enjoy working with modern technologies, solving real-world challenges, and continuously learning to deliver clean, scalable solutions.
+                </p>
 
                 {/* Tech Stack */}
                 <div
@@ -259,14 +258,26 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Right Column - Optimized Lottie Animation */}
+            {/* Right Column - GIF + Lottie */}
             <div
-              className="w-full py-[10%] sm:py-0 lg:w-1/2 h-auto lg:h-[600px] xl:h-[750px] relative flex items-center justify-center order-2 lg:order-2 mt-8 lg:mt-0"
+              className="w-full py-[10%] sm:py-0 lg:w-1/2 h-auto lg:h-[600px] xl:h-[750px] relative flex flex-col items-center justify-center order-2 lg:order-2 mt-8 lg:mt-0"
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
               data-aos="fade-left"
               data-aos-delay="600"
             >
+              {/* GIF */}
+              <img
+    src="/Coding.gif"
+    alt="Coding animation"
+    className="w-[350px] mb-4 rounded-lg shadow-lg object-contain"
+    style={{
+      filter: "contrast(1.1) brightness(1.1)",
+      marginTop: "200px",
+    }}
+  />
+
+              {/* Lottie Animation */}
               <div className="relative w-full opacity-90">
                 <div
                   className={`absolute inset-0 bg-gradient-to-r from-[#6366f1]/10 to-[#a855f7]/10 rounded-3xl blur-3xl transition-all duration-700 ease-in-out ${
