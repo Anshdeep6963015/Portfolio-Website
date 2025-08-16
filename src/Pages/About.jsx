@@ -101,8 +101,8 @@ const StatCard = memo(({ icon: Icon, color, value, label, description, animation
 const AboutPage = () => {
   const { totalProjects, totalCertificates, YearExperience } = useMemo(() => {
     return {
-      totalProjects: 3,
-      totalCertificates: 5,
+      totalProjects: 6,
+      totalCertificates: 23,
       YearExperience: 0 ,
     };
   }, []);
